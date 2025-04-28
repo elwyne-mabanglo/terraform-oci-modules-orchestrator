@@ -26,6 +26,7 @@ variableGroups:
       - oci_dependency_objects
       - github_token
       - github_base_url
+      - github_owner
       - github_configuration_repo
       - github_configuration_branch
       - github_configuration_files
@@ -123,6 +124,15 @@ variables:
   github_base_url:
     type: string
     title: "Github Base URL"
+    description: "Only required when working with GitHub Enterprise. The value must end with a slash. E.g. https://example.com/"
+    visible:
+      eq:
+        - configuration_source
+        - "github"
+
+  github_owner:
+    type: string
+    title: "Github Owner"
     description: "Only required when working with GitHub Enterprise. The value must end with a slash. E.g. https://example.com/"
     visible:
       eq:

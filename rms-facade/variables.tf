@@ -34,6 +34,11 @@ variable "github_base_url" {
   default     = null
   description = "GitHub base API endpoint. Required when working with GitHub Enterprise. The value must end with a slash. E.g. https://example.com/"
 }
+variable "github_owner" {
+  type        = string
+  default     = null
+  description = "Only required when working with GitHub Enterprise. The value must end with a slash. E.g. https://example.com/"
+}
 variable "github_file_prefix" {
   type    = string
   default = null
